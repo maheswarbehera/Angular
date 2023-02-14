@@ -1,0 +1,14 @@
+<div class="container mt-3">
+    <a href="#"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/AdvantagePrime/BAU/25thJuly/D46321486_IN_WLME_Advantage_for_prime_PC_ingress-banner_1500x300.jpg" alt="banner" width="100%"></a>
+
+    <h4 class="header my-3">Bestsellers from other brands</h4>
+    <div class="row">
+        <div class="col-2" *ngFor="let mobile of mobileList;">
+            <a routerLink="/mobile-view">
+                <img src="{{mobile.image}}" width="200px" height="190px">
+            </a>
+            <h6>{{mobile.name}}</h6>
+            <p>Price: ₹{{mobile.price}}</p>
+        </div>        
+    </div>
+</div>

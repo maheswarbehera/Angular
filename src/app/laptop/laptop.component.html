@@ -1,0 +1,50 @@
+<div class="container">
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" width="100%">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide" width="100%" >
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide" width="100%">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+<div class="container mt-3">
+    <h1>Todays Deals</h1>
+
+    <div class="row mt-3">
+
+        <div class="col-2" *ngFor='let laptop of laptopList;'>
+          <a routerLink="/laptop-view">
+            <img src="{{laptop.image}}" height="140px" width="180px">
+          </a>
+                <h6>{{laptop.name}} </h6>
+                <p>Price: ₹{{laptop.price}}</p>
+                <p>Processor: {{laptop.processor}}</p>
+        </div>
+    </div>
+    <div class="container my-3">
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/laptop/june/D35259883_IN_PC-Laptops-December-BAU-Creatives-December_1242x450.jpg" alt="" width="100%">
+    </div>
+</div>

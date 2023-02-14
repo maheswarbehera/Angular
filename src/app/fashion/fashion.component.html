@@ -1,0 +1,22 @@
+<div class="container mt-3">
+    <div class="row">
+        <h4 class="line mb-3">Top-Rated Men's Clothing</h4>
+        <div class="col-3" *ngFor="let fashion of menfashionList;">
+            <a href="">
+                <img src="{{fashion.image}}" alt="saree" height="250px" width="250px">
+            </a>
+            <p>{{fashion.name}}</p>
+            <p>Price: ₹{{fashion.price}}</p>
+        </div>
+      
+        <h4 class="line mb-3">Top-Rated Women's Clothing</h4>
+        <div class="col-3" *ngFor="let fashion of womenfashionList;">
+            <a href="">
+                <img src="{{fashion.image}}"  height="220px" width="250px">
+            </a>
+            <p>{{fashion.name}}</p>
+            <p>Price: ₹{{fashion.price}}</p>
+        </div>
+        
+    </div>
+</div>
